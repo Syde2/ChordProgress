@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <title>Chord Progress</title>
+        <link rel="stylesheet" href="css/pico.slate.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.slate.min.css"/>
+
+        <link rel="icon" type="image/jpg" href="{{ absolute_url(asset('favicon.png')) }}" />
+
         {% block stylesheets %}
         {% endblock %}
 
         {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    {% block importmap %}{{ importmap('app') }}{% endblock %}
+    {% endblock %}
+</head>
+<body>
+
+<nav class="container-fluid">
+  <ul>
+    <li><h2>Chord  Progress </h2></li>
+  </ul>
+  <ul>
+    <li><a  role="button"  href="#">Progressions</a></li>
+    <li><a  role="button" href="#">Songs</a></li>
+    <li><a  role="button" href="#">About</a></li>
+  </ul>
+</nav>
+
+
+<main class="container">
+{% block body %}
+{% endblock %}
+</main>
+
+</body>
 </html>
