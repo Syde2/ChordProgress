@@ -24,6 +24,20 @@ Factory Model
 Prend en Entrée un Array de Notes  Retourne la Progression 
 Avoir une Class par Progression ? Qui extend d’une class Progression Factory ? 
 
-PseudoCode : 
+## DB 
 
-$Scale = [A,B,C,D,E,F,G]
+MajorScaleByPosition : 
+
+| Name  | A  | Asharp  | Bflat  | B  | C | Csharp | | G♭ | G
+|---|---|---|---|---|---|---|---|---|---|
+| C  |  6 | Null  | Null | 2  | 3  | 4 | null | null | 5 
+...
+
+MajorScaleByNote
+
+| Name  | 1  |2  | 3  | 4  | 5 |6 |7 |
+|---|---|---|---|---|---|---|---|
+| C  | C |D  | E | F  | G  | A | B 
+| D  | D | E  | F# | G  | A  | B | C# 
+
+...
